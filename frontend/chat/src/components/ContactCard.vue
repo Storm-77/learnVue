@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" @click="$emit('switch-conversation', user.login.uuid)">
     <img class="image" v-bind:src="user.picture.thumbnail" alt="" />
     <div :class="[user.gender, 'nickname']">
       {{ `${user.name.first} - ${user.name.last}` }}
